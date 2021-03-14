@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-dynamic-renderer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Renders and splits components dynamically to reduce the bundle size.",
   "main": "index.js",
   "repository": {

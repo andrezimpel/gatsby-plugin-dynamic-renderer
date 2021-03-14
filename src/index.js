@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Renderer = ({ sections=[], sectionMap={} }) => {
+const Renderer = ({ sections=[], sectionMap={}, key }) => {
   return sections.map((section, index) => {
-    const Component = SECTION_MAP[section.__typename]
+    const Component = SECTION_MAP[section[key]]
     return (
       <Component
         key={index}
         id={section.id}
+        {...section}
         fallback={getFallback(section.id)}
       />
     )
