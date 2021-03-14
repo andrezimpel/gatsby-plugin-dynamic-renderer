@@ -1,0 +1,43 @@
+{
+  "name": "gatsby-plugin-dynamic-renderer",
+  "version": "1.0.0",
+  "description": "Renders and splits components dynamically to reduce the bundle size.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andrezimpel/gatsby-plugin-dynamic-renderer.git"
+  },
+  "keywords": [
+    "code",
+    "splitting",
+    "gatsby",
+    "dynamic",
+    "rendering",
+    "loadable",
+    "components"
+  ],
+  "author": "Andre Zimpel <andre@unknownbasics.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrezimpel/gatsby-plugin-dynamic-renderer/issues"
+  },
+  "homepage": "https://github.com/andrezimpel/gatsby-plugin-dynamic-renderer#readme",
+  "dependencies": {
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/component": "^5.14.1",
+    "@loadable/server": "^5.14.2",
+    "@loadable/webpack-plugin": "^5.14.2",
+    "babel-preset-gatsby": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/runtime": "^7.13.10"
+  },
+  "scripts": {
+    "build": "NODE_ENV=test babel src --out-dir . --ignore **/__tests__",
+    "prepare": "NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "format": "eslint ./src --ext js,jsx --fix"
+  }
+}
